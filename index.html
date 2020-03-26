@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.16/dist/summernote-bs4.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Newskon</title>
+</head>
+
+<body class="body">
+    <!-- //side nav start// -->
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <img src="background-img.png" alt="Snow" style="width:150px;height:150px;margin-left:20%;border-radius:50%;">
+        <a href="#home" class="menu-items"><i class="fa fa-fw fa-home"></i> Home</a>
+        <a href="#services" class="menu-items"><i class="fa fa-fw fa-wrench"></i> Services</a>
+        <a href="#clients" class="menu-items"><i class="fa fa-fw fa-user"></i> Clients</a>
+        <a href="#contact" class="menu-items"><i class="fa fa-fw fa-envelope"></i> Contact</a>
+    </div>
+
+    <div id="main">
+        <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Newskon</span>
+
+
+        <p class="font-weight-bold">News Category : </p>
+
+        <div class="row" id="category-container">
+        </div>
+
+
+        <p class="font-weight-bold mt-3">Heading of your post : </p>
+        <textarea name="news_heading" id="heading" class="form-control" rows="1" required="required"
+            placeholder="Heading"></textarea><br>
+
+        <div class="image-preview" id="imagePreview">
+            <img src="" alt="Image Preview" class="image-preview__image">
+            <span class="image-preview__default-text">Image Preview</span>
+        </div>
+        <br/>
+        <p id="image-status"></p>
+        <br/>
+        <label for="myfile" class="font-weight-bold">Select files:</label>
+        <input type="file" id="inpfile" name="inpfile" class="image-input font-weight-bold" accept="image/*">
+
+        <br><br>
+        <label for="myfile" class="font-weight-bold">Source(URL):</label>
+        <textarea name="news_heading" id="source-url" class="form-control" rows="1" required="required"
+            placeholder="Enter the url"></textarea><br> <br>
+
+        <div id="summernote"></div>
+        <br>
+        <div class="submit-btn" ><button id="submit" class="btn btn-primary" disabled>Let's Go</button></div>
+
+    </div>
+
+    <!-- //jquery and bootstrap// -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.16/dist/summernote-bs4.min.js"></script>
+    <script src="javascript.js"></script>
+    <!-- //summernote related code end// -->
+
+    <!-- //other scripts// -->
+
+    <script>
+        $('#summernote').summernote({
+            placeholder: 'Write your main content here...',
+            tabsize: 1,
+            height: 150,
+        });
+    </script>
+
+
+    <script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-firestore.js"></script>
+    <script src="custom-firebase.js"></script>
+
+
+
+</body>
+
+</html>
