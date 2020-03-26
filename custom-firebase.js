@@ -85,6 +85,7 @@ $("document").ready(function() {
         data.date = new Date().getTime();
         data.imageUrl = uploadedImageUrl;
         data.headline = $('#heading').val();
+        data.source = $("#source-url").val();
         
         console.log(data);
 
