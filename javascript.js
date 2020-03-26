@@ -44,7 +44,7 @@ openNav();
 
 function makeCategories() {
 
-    var categoryArray = ["CAA", "Corono Virus", "India", "Business",
+    var categoryArray = ["CAA", "Corona Virus", "India", "Business",
         "Politics", "Sports", "Technology", "Startups",
         "Entertains", "Internation", "Automobile"];
 
