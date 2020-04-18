@@ -27,10 +27,14 @@ $("document").ready(function() {
       var $files = $(this).get(0).files;
   
       if ($files.length) {
+
+        console.log($files[0].size);
   
         // Reject big files
         if ($files[0].size > $(this).data("max-size") * 1024) {
           console.log("Please select a smaller file");
+          imageStatus.html("<span style='color:red;'>Please select a smaller file than 1 mb</span>");
+
           return false;
         }
   
