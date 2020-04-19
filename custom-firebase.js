@@ -110,7 +110,7 @@ function initFileUpload() {
 
 }
 
-Sammy('#main', function () {
+Sammy('#app', function () {
 
   this.use('Template');
 
