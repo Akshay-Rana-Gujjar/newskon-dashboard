@@ -1,0 +1,36 @@
+<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Newskon</span>
+<div class="container">
+
+    <div class="row">
+
+        <% for ( var i = 0; i < news.length; i++ ) { %>
+
+        <div class="col-sm-12 mb-2" id="news-<%=news[i].id%>">
+
+            <div class="card p-3">
+                <div class="row">
+
+                    <div class="col-sm-4">
+                        <img class="card-img-top" src="<%=news[i].imageUrl%>" alt="Card image cap">
+                    </div>
+                    <div class="col-sm-8">
+
+                        <h5 class="card-title"><%=news[i].headline%></h5>
+                        <hr />
+                        <p class="card-text">
+
+                            <%!news[i].description %>
+
+                        </p>
+                        <div class="text-center">
+                            <Button class="btn btn-danger" onclick="deleteNews('<%=news[i].id%>')">Delete</Button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+        <% } %>
+    </div>
+</div>

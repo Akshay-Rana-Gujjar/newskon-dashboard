@@ -1,0 +1,31 @@
+<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Newskon</span>
+
+
+        <p class="font-weight-bold">News Category : </p>
+
+        <div class="row" id="category-container">
+        </div>
+
+
+        <p class="font-weight-bold mt-3">Heading of your post : </p>
+        <textarea name="news_heading" id="heading" class="form-control" rows="1" required="required"
+            placeholder="Heading"></textarea><br>
+
+        <div class="image-preview" id="imagePreview">
+            <img src="" alt="Image Preview" class="image-preview__image">
+            <span class="image-preview__default-text">Image Preview</span>
+        </div>
+        <br/>
+        <p id="image-status"></p>
+        <br/>
+        <label for="myfile" class="font-weight-bold">Select files:</label>
+        <input type="file" id="inpfile" name="inpfile" class="image-input font-weight-bold" accept="image/png, image/jpg, image/jpeg" data-max-size="15000">
+
+        <br><br>
+        <label for="myfile" class="font-weight-bold">Source(URL):</label>
+        <textarea name="news_heading" id="source-url" class="form-control" rows="1" required="required"
+            placeholder="Enter the url"></textarea><br> <br>
+
+        <div id="summernote"></div>
+        <br>
+        <div class="submit-btn" ><button id="submit" class="btn btn-primary" disabled>Let's Go</button></div>

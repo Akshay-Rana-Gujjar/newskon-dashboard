@@ -11,42 +11,43 @@ function closeNav() {
 }
 
 /* image preview */
+function initHome() {
 
-const inpFile = document.getElementById("inpfile");
-const previewContainer = document.getElementById("imagePreview");
-const previewImage = previewContainer.querySelector(".image-preview__image");
-const previewDefaultText = previewContainer.querySelector(".image-preview__default-text");
 
-inpFile.addEventListener("change", function () {
-    const file = this.files[0];
+    const inpFile = document.getElementById("inpfile");
+    const previewContainer = document.getElementById("imagePreview");
+    const previewImage = previewContainer.querySelector(".image-preview__image");
+    const previewDefaultText = previewContainer.querySelector(".image-preview__default-text");
 
-    if (file) {
-        const reader = new FileReader();
+    inpFile.addEventListener("change", function () {
+        const file = this.files[0];
 
-        previewDefaultText.style.display = "none";
-        previewImage.style.display = "block";
+        if (file) {
+            const reader = new FileReader();
 
-        reader.addEventListener("load", function () {
-            console.log(this);
-            previewImage.setAttribute("src", this.result);
-        });
+            previewDefaultText.style.display = "none";
+            previewImage.style.display = "block";
 
-        reader.readAsDataURL(file);
-    } else {
-        previewDefaultText.style.display = null;
-        previewImage.style.display = null;
-        previewImage.setAttribute("src", "");
-    }
-});
+            reader.addEventListener("load", function () {
+                console.log(this);
+                previewImage.setAttribute("src", this.result);
+            });
 
-if(screen.width >= 657)
-openNav();
+            reader.readAsDataURL(file);
+        } else {
+            previewDefaultText.style.display = null;
+            previewImage.style.display = null;
+            previewImage.setAttribute("src", "");
+        }
+    });
+
+}
 
 function makeCategories() {
 
     var categoryArray = ["CAA", "Corona Virus", "India", "Business",
         "Politics", "Sports", "Technology", "Startups",
-        "Entertains", "Internation", "Automobile"];
+        "Entertains", "International", "Automobile"];
 
     var categoryContainer = document.getElementById("category-container");
 
@@ -67,4 +68,3 @@ function makeCategories() {
     categoryContainer.innerHTML = categoryHTML;
 }
 
-makeCategories();
