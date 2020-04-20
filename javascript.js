@@ -41,6 +41,12 @@ function initHome() {
         }
     });
 
+    $('#summernote').summernote({
+        placeholder: 'Write your main content here...',
+        tabsize: 1,
+        height: 150,
+    });
+
 }
 
 function makeCategories() {
