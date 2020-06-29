@@ -8,7 +8,7 @@
 
         <div>
             <p>
-                <h5>
+                <h5 class="font-weight-bold mt-3">
                     <label>
                         News for hindi: <input type="checkbox"  id="hindiNews"  /> 
                     </label>
