@@ -90,6 +90,7 @@ function initFileUpload() {
     data.imageUrl = uploadedImageUrl;
     data.headline = $('#heading').val();
     data.source = $("#source-url").val();
+    data.is_hindi = document.getElementById("hindiNews").checked;
 
     console.log(data);
 
@@ -176,3 +177,4 @@ function deleteNews(docID) {
     });
 
 }
+

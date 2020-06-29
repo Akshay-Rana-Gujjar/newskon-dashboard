@@ -6,6 +6,9 @@
         <div class="row" id="category-container">
         </div>
 
+        <div>
+            News for hindi: <input type="checkbox"  id="hindiNews"  />
+        </div>
 
         <p class="font-weight-bold mt-3">Heading of your post : </p>
         <textarea name="news_heading" id="heading" class="form-control" rows="1" required="required"
