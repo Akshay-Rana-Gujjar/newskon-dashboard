@@ -7,7 +7,13 @@
         </div>
 
         <div>
-            News for hindi: <input type="checkbox"  id="hindiNews"  />
+            <p>
+                <h5>
+                    <label>
+                        News for hindi: <input type="checkbox"  id="hindiNews"  /> 
+                    </label>
+                </h5>
+            </p>
         </div>
 
         <p class="font-weight-bold mt-3">Heading of your post : </p>
